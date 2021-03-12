@@ -1,13 +1,17 @@
 <!DOCTYPE HTML>
 <html>
-<head>  
+
+<head>
     <title>COVID-19 effect on Price Changes</title>
     <link rel="stylesheet" href="style/styles.css">
 </head>
+
 <body>
     <header>
         <div class="header-content">
-            <a class="header-home" href="/"><i><h1>COVID-19 effect on<br>the Stock Market</h1></i></a>
+            <a class="header-home" href="/"><i>
+                    <h1>COVID-19 effect on<br>the Stock Market</h1>
+                </i></a>
             <a class="header-tab" href="/prices.html">Price changes</a>
             <a class="header-tab" href="/interest.html">Public interest</a>
             <a class="header-tab" href="/market.html">Market stats</a>
@@ -106,57 +110,112 @@
         <table class="industry-table">
             <thead class="sector-header">
                 <tr>
-                    <th><h3>Industry</h3></th>
-                    <th><h3>Performance</h3></th>
+                    <th>
+                        <h3>Industry</h3>
+                    </th>
+                    <th>
+                        <h3>Performance</h3>
+                    </th>
                 </tr>
             </thead>
             <tbody>
                 <tr>
-                    <td><h4>Farming</h4></td>
-                    <td><div class="chart" id="farming"></div></td>
+                    <td>
+                        <h4>Farming</h4>
+                    </td>
+                    <td>
+                        <div class="chart" id="farming"></div>
+                    </td>
                 </tr>
                 <tr>
-                    <td><h4>Restaurants</h4></td>
-                    <td><div class="chart" id="restaurants"></div></td>
+                    <td>
+                        <h4>Restaurants</h4>
+                    </td>
+                    <td>
+                        <div class="chart" id="restaurants"></div>
+                    </td>
                 </tr>
                 <tr>
-                    <td><h4>Hotels</h4></td>
-                    <td><div class="chart" id="hotels"></div></td>
+                    <td>
+                        <h4>Hotels</h4>
+                    </td>
+                    <td>
+                        <div class="chart" id="hotels"></div>
+                    </td>
                 </tr>
                 <tr>
-                    <td><h4>Air freight<br>(e.g. Boeing, American Airlines)</h4></td>
-                    <td><div class="chart" id="air_freight"></div></td>
+                    <td>
+                        <h4>Air freight<br>(e.g. Boeing, American Airlines)</h4>
+                    </td>
+                    <td>
+                        <div class="chart" id="air_freight"></div>
+                    </td>
                 </tr>
                 <tr>
-                    <td><h4>Computer manufacturing<br>(e.g. Apple, Dell)</h4></td>
-                    <td><div class="chart" id="computer_manufacturing"></div></td>
+                    <td>
+                        <h4>Computer manufacturing<br>(e.g. Apple, Dell)</h4>
+                    </td>
+                    <td>
+                        <div class="chart" id="computer_manufacturing"></div>
+                    </td>
                 </tr>
                 <tr>
-                    <td><h4>Major pharmaceuticals</h4></td>
-                    <td><div class="chart" id="major_pharmaceuticals"></div></td>
+                    <td>
+                        <h4>Major pharmaceuticals</h4>
+                    </td>
+                    <td>
+                        <div class="chart" id="major_pharmaceuticals"></div>
+                    </td>
                 </tr>
                 <tr>
-                    <td><h4>Broadcasting<br>(e.g. Spotify)</h4></td>
-                    <td><div class="chart" id="broadcasting"></div></td>
+                    <td>
+                        <h4>Broadcasting<br>(e.g. Spotify)</h4>
+                    </td>
+                    <td>
+                        <div class="chart" id="broadcasting"></div>
+                    </td>
                 </tr>
                 <tr>
-                    <td><h4>Power generation</h4></td>
-                    <td><div class="chart" id="power_generation"></div></td>
+                    <td>
+                        <h4>Power generation</h4>
+                    </td>
+                    <td>
+                        <div class="chart" id="power_generation"></div>
+                    </td>
                 </tr>
                 <tr>
-                    <td><h4>Computer communications equipment</h4></td>
-                    <td><div class="chart" id="computer_communications_equipment"></div></td>
+                    <td>
+                        <h4>Computer communications equipment</h4>
+                    </td>
+                    <td>
+                        <div class="chart" id="computer_communications_equipment"></div>
+                    </td>
                 </tr>
                 <tr>
-                    <td><h4>Computer software<br>(e.g. Zoom, Adobe)</h4></td>
-                    <td><div class="chart" id="computer_software"></div></td>
+                    <td>
+                        <h4>Computer software<br>(e.g. Zoom, Adobe)</h4>
+                    </td>
+                    <td>
+                        <div class="chart" id="computer_software"></div>
+                    </td>
                 </tr>
                 <tr>
-                    <td><h4>Movies/Entertainment<br>(e.g. Netflix, AMC)</h4></td>
-                    <td><div class="chart" id="movies_entertainment"></div></td>
+                    <td>
+                        <h4>Movies/Entertainment<br>(e.g. Netflix, AMC)</h4>
+                    </td>
+                    <td>
+                        <div class="chart" id="movies_entertainment"></div>
+                    </td>
                 </tr>
             </tbody>
         </table>
+
+
+        <h2>Starting trend for stock first year after IPO</h2>
+        <div id="chartContainer" style="height: 370px; width: 100%; display: none;"></div>
+        <div id="firstYearTrendChart" style="height: 370px; width: 100%;"></div>
+        <div id="firstYearTrendZoomedChart" style="height: 370px; width: 100%; margin-top: 10px;"></div>
+
     </main>
 
     <script src="scripts/lib/canvasjs.min.js"></script>
@@ -175,5 +234,10 @@
 
     <script src="scripts/data.js"></script>
     <script src="scripts/history.js"></script>
+
+    <script src="scripts/trend_by_ipo_data_tables.js"></script>
+    <script src="scripts/trend_by_ipo.js"></script>
+
 </body>
+
 </html>
