@@ -62,7 +62,7 @@ header {
 .header-content {
     max-width: 1300px;
     margin: 0 auto;
-    padding: .5rem;
+    padding: .5rem 1.5rem;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -82,6 +82,11 @@ header {
     color: #666;
     padding: .75rem 2rem;
     margin: 0 1rem;
+}
+
+.header-contact {
+    color: #444;
+    margin-left: auto;
 }
 
 .header-survey {
