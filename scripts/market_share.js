@@ -472,7 +472,9 @@ function loadData() {
 
     for (var i = 0; i < charts[0].data.length; i++) {
         var sectorName = charts[0].data[i].options.name;
-        var checkBox = `<div class="sector-filter-item"><input type="checkbox" id="sector-${i}" name="${sectorName}" value="${i}" checked="true" onchange="sectorCheckBoxChanged(${i}, this)"><span>${sectorName}</span><br></div>`;
+        var color = charts[0].data[i].color;
+        var checkBox = `<label class="container">${sectorName}<input type="checkbox" checked="true" onchange="sectorCheckBoxChanged(${i}, this)"><span style="background-color: ${color};" class="checkmark"></span></label>`;
+        //var checkBox = `<div class="sector-filter-item"><input type="checkbox" id="sector-${i}" name="${sectorName}" value="${i}" checked="true" onchange="sectorCheckBoxChanged(${i}, this)"><span>${sectorName}</span><br></div>`;
         document.getElementById("sector-filter").insertAdjacentHTML('beforeend', checkBox);
     }
 }
