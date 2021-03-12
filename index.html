@@ -1,0 +1,189 @@
+<!DOCTYPE HTML>
+<html>
+<head>  
+    <title>Stock Market - Visualization </title>
+    <link rel="stylesheet" href="style/styles.css">
+</head>
+<body>
+    <header>
+        <h1>Stock Market Visualization</h1>
+        <p>Viewing how different stock sectors performed over the years</p>
+    </header>
+
+    <main>
+        <h2>Comparing COVID-19 to other stock market crises</h2>
+        <div class="history-table">
+            <div class="history-table__header">
+                <h3 class="history-table__header-sector">Sector</h3>
+                <div class="history-table__header-change">
+                    <h3>Relative volatility over time (1 bar = 5 weeks)</h3>
+
+                    <div class="history-table__header-change__description">
+                        <span style="left: 5px; bottom: 7px;">01/2005</span>
+                        <span style="left: 165px;">Financial crisis <br>of 09/2008</span>
+                        <span style="left: 322px;">Debt crisis <br>of 08/2011</span>
+                        <span style="left: 570px;">Brexit vote <br>of 06/2016</span>
+                        <span style="left: 678px;">Crypo crash <br>of 09/2018</span>
+                        <span style="left: 758px;">COVID-19 <br>02/2020</span>
+                    </div>
+                </div>
+            </div>
+            <div class="history-table__content">
+                <div class="historical-sector">
+                    <h4>Capital goods</h4>
+                    <canvas id="history-capital_goods" class="historical-sector__chart"></canvas>
+                </div>
+                <div class="historical-sector">
+                    <h4>Consumer durables</h4>
+                    <canvas id="history-consumer_durables" class="historical-sector__chart"></canvas>
+                </div>
+                <div class="historical-sector">
+                    <h4>Finance</h4>
+                    <canvas id="history-finance" class="historical-sector__chart"></canvas>
+                </div>
+                <div class="historical-sector">
+                    <h4>Health care</h4>
+                    <canvas id="history-health_care" class="historical-sector__chart"></canvas>
+                </div>
+                <div class="historical-sector">
+                    <h4>Energy</h4>
+                    <canvas id="history-energy" class="historical-sector__chart"></canvas>
+                </div>
+                <div class="historical-sector">
+                    <h4>Consumer non-durables</h4>
+                    <canvas id="history-consumer_non-durables" class="historical-sector__chart"></canvas>
+                </div>
+                <div class="historical-sector">
+                    <h4>Technology</h4>
+                    <canvas id="history-technology" class="historical-sector__chart"></canvas>
+                </div>
+                <div class="historical-sector">
+                    <h4>Public utilities</h4>
+                    <canvas id="history-public_utilities" class="historical-sector__chart"></canvas>
+                </div>
+                <div class="historical-sector">
+                    <h4>Miscellaneous</h4>
+                    <canvas id="history-miscellaneous" class="historical-sector__chart"></canvas>
+                </div>
+                <div class="historical-sector">
+                    <h4>Consumer services</h4>
+                    <canvas id="history-consumer_services" class="historical-sector__chart"></canvas>
+                </div>
+                <div class="historical-sector">
+                    <h4>Basic industries</h4>
+                    <canvas id="history-basic_industries" class="historical-sector__chart"></canvas>
+                </div>
+                <div class="historical-sector">
+                    <h4>Transportation</h4>
+                    <canvas id="history-transportation" class="historical-sector__chart"></canvas>
+                </div>
+            </div>
+            <div class="historical-footer">
+                <div class="historical-legend">
+                    <div class="historical-legend__title">
+                        <h3>Bar legend</h3>
+                        <p>for any particual sector</p>
+                    </div>
+                    <div class="historical-scale"></div>
+                    <div class="historical-scale__explanation">
+                        <p>High <strong>positive</strong> price change relative to the entire history of that sector</p>
+                        <p>No price change</p>
+                        <p>High <strong>negative</strong> price change relative to the entire history of that sector</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <br><br><br>
+        <h2>How were different industries affected?</h2>
+
+        <table class="industry-table">
+            <thead class="sector-header">
+                <tr>
+                    <th><h3>Industry</h3></th>
+                    <th><h3>Performance</h3></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><h4>Farming</h4></td>
+                    <td><div class="chart" id="farming"></div></td>
+                </tr>
+                <tr>
+                    <td><h4>Restaurants</h4></td>
+                    <td><div class="chart" id="restaurants"></div></td>
+                </tr>
+                <tr>
+                    <td><h4>Hotels</h4></td>
+                    <td><div class="chart" id="hotels"></div></td>
+                </tr>
+                <tr>
+                    <td><h4>Air freight<br>(e.g. Boeing, American Airlines)</h4></td>
+                    <td><div class="chart" id="air_freight"></div></td>
+                </tr>
+                <tr>
+                    <td><h4>Computer manufacturing<br>(e.g. Apple, Dell)</h4></td>
+                    <td><div class="chart" id="computer_manufacturing"></div></td>
+                </tr>
+                <tr>
+                    <td><h4>Major pharmaceuticals</h4></td>
+                    <td><div class="chart" id="major_pharmaceuticals"></div></td>
+                </tr>
+                <tr>
+                    <td><h4>Broadcasting<br>(e.g. Spotify)</h4></td>
+                    <td><div class="chart" id="broadcasting"></div></td>
+                </tr>
+                <tr>
+                    <td><h4>Power generation</h4></td>
+                    <td><div class="chart" id="power_generation"></div></td>
+                </tr>
+                <tr>
+                    <td><h4>Computer communications equipment</h4></td>
+                    <td><div class="chart" id="computer_communications_equipment"></div></td>
+                </tr>
+                <tr>
+                    <td><h4>Computer software<br>(e.g. Zoom, Adobe)</h4></td>
+                    <td><div class="chart" id="computer_software"></div></td>
+                </tr>
+                <tr>
+                    <td><h4>Movies/Entertainment<br>(e.g. Netflix, AMC)</h4></td>
+                    <td><div class="chart" id="movies_entertainment"></div></td>
+                </tr>
+            </tbody>
+        </table>
+
+        <br><br><br>
+        <h2>How was the public sentiment affected?</h2>
+        <div class="large-chart" id="sentiment"></div>
+
+        <br><br>
+        <h2>Interest in the different stock sectors</h2>
+        <div class="large-chart" id="interest"></div>
+
+    </main>
+
+    <script src="scripts/lib/canvasjs.min.js"></script>
+
+    <script src="scripts/performance/farming.js"></script>
+    <script src="scripts/performance/restaurants.js"></script>
+    <script src="scripts/performance/hotels.js"></script>
+    <script src="scripts/performance/computer_software.js"></script>
+    <script src="scripts/performance/air_freight.js"></script>
+    <script src="scripts/performance/computer_manufacturing.js"></script>
+    <script src="scripts/performance/major_pharmaceuticals.js"></script>
+    <script src="scripts/performance/broadcasting.js"></script>
+    <script src="scripts/performance/movies_entertainment.js"></script>
+    <script src="scripts/performance/power_generation.js"></script>
+    <script src="scripts/performance/computer_communications_equipment.js"></script>
+
+    <script src="scripts/data.js"></script>
+    <script src="scripts/history.js"></script>
+    <script src="scripts/sentiment.js"></script>
+
+    <script src="https://cdn.amcharts.com/lib/4/core.js"></script>
+    <script src="https://cdn.amcharts.com/lib/4/charts.js"></script>
+    <script src="https://cdn.amcharts.com/lib/4/themes/animated.js"></script>
+
+    <script src="scripts/interest.js"></script>
+</body>
+</html>
