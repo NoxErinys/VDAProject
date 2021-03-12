@@ -1,0 +1,39 @@
+<!DOCTYPE HTML>
+<html>
+<head>  
+    <title>COVID-19 effect on the Stock Market </title>
+    <link rel="stylesheet" href="style/styles.css">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <a class="header-home" href="/"><i><h1>COVID-19 effect on<br>the Stock Market</h1></i></a>
+            <a class="header-tab" href="/prices.html">Price changes</a>
+            <a class="header-tab" href="/interest.html">Public interest</a>
+            <a class="header-tab" href="/market.html">Market stats</a>
+            <a class="header-tab header-survey" href="/survey">Survey</a>
+        </div>
+    </header>
+
+    <main>
+        <h1 class="title">COVID-19 effect on the <i>public interest</i></h1>
+        
+        <h2>How was the public sentiment affected?</h2>
+        <div class="large-chart" id="sentiment"></div>
+
+        <br><br>
+        <h2>Interest in the different stock sectors</h2>
+        <div class="large-chart" id="interest"></div>
+
+    </main>
+
+    <script src="scripts/lib/canvasjs.min.js"></script>
+    <script src="scripts/sentiment.js"></script>
+
+    <script src="https://cdn.amcharts.com/lib/4/core.js"></script>
+    <script src="https://cdn.amcharts.com/lib/4/charts.js"></script>
+    <script src="https://cdn.amcharts.com/lib/4/themes/animated.js"></script>
+
+    <script src="scripts/interest.js"></script>
+</body>
+</html>
