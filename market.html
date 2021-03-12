@@ -1,13 +1,18 @@
 <!DOCTYPE HTML>
 <html>
-<head>  
+
+<head>
     <title>COVID-19 effect on the Stock Market </title>
     <link rel="stylesheet" href="style/styles.css">
+    <script src="scripts/market_share_data_tables.js"></script>
 </head>
+
 <body>
     <header>
         <div class="header-content">
-            <a class="header-home" href="/"><i><h1>COVID-19 effect on<br>the Market Statistics</h1></i></a>
+            <a class="header-home" href="/"><i>
+                    <h1>COVID-19 effect on<br>the Market Statistics</h1>
+                </i></a>
             <a class="header-tab" href="/prices.html">Price changes</a>
             <a class="header-tab" href="/interest.html">Public interest</a>
             <a class="header-tab" href="/market.html">Market stats</a>
@@ -16,11 +21,28 @@
     </header>
 
     <main>
-        <h1 class="title">COVID-19 effect on the <i>market Statistics</i></h1>
+        <h1 class="title">COVID-19 effect on the <i>market statistics</i></h1>
 
-        
+        <div id="sector-filter" style="background: #e2e1e114; margin-bottom: 40px;">
+            <div style="display: flex;"><span style="padding: 9px; font-size: 24px;">Filter: </span></div>
+        </div>
+        <div class="row">
+            <div class="col left" id="sectorVolumeContainer"></div>
+            <div class="col right" id="sectorPercentContainer"></div>
+        </div>
+        <div class="row" style="margin-top: 10px;">
+            <div class="col left" id="sectorMarketCapContainer"></div>
+            <div class="col right" id="sectorMarketCapPercentContainer"></div>
+        </div>
+        <div class="row" style="margin-top: 10px;">
+            <div class="full-width-col" id="industryVolumeContainer"></div>
+            <div class="col" style="display: none;" id="industryPercentContainer"></div>
+        </div>
+
     </main>
 
     <script src="scripts/lib/canvasjs.min.js"></script>
+    <script src="scripts/market_share.js"></script>
 </body>
+
 </html>
