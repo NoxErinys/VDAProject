@@ -1,14 +1,18 @@
 <!DOCTYPE HTML>
 <html>
-<head>  
+
+<head>
     <title>COVID-19 effect on the Public Interest</title>
-    <link rel="icon" type="image/png" href="/images/favicon.png"/>
+    <link rel="icon" type="image/png" href="/images/favicon.png" />
     <link rel="stylesheet" href="style/styles.css">
 </head>
+
 <body>
     <header>
         <div class="header-content">
-            <a class="header-home" href="/"><i><h1>COVID-19 effect on<br>the Stock Market</h1></i></a>
+            <a class="header-home" href="/"><i>
+                    <h1>COVID-19 effect on<br>the Stock Market</h1>
+                </i></a>
             <a class="header-tab" href="/prices.html">Price changes</a>
             <a class="header-tab" href="/interest.html">Public interest</a>
             <a class="header-tab" href="/market.html">Market stats</a>
@@ -19,7 +23,7 @@
 
     <main>
         <h1 class="title">COVID-19 effect on the <i>public interest</i></h1>
-        
+
         <h2>How was the public sentiment affected?</h2>
         <div class="large-chart" id="sentiment"></div>
 
@@ -27,6 +31,18 @@
         <h2>Interest in the different stock sectors</h2>
         <div class="large-chart" id="interest"></div>
 
+
+        <h2>Interest change by country compared to 2019</h2>
+
+        <div id="map-chart-div"></div>
+        <div id="legend">
+            <div id="map-legend-div"></div>
+            <div id="legend-text-div">
+                <span>Heighest Decrease</span>
+                <span>No change</span>
+                <span>Heighest Increase</span>
+            </div>
+        </div>
     </main>
 
     <script src="scripts/lib/canvasjs.min.js"></script>
@@ -35,7 +51,15 @@
     <script src="https://cdn.amcharts.com/lib/4/core.js"></script>
     <script src="https://cdn.amcharts.com/lib/4/charts.js"></script>
     <script src="https://cdn.amcharts.com/lib/4/themes/animated.js"></script>
+    <script src="https://cdn.amcharts.com/lib/4/maps.js"></script>
+    <script src="https://cdn.amcharts.com/lib/4/geodata/worldLow.js"></script>
+    <script src="https://cdn.amcharts.com/lib/4/geodata/data/countries2.js"></script>
 
     <script src="scripts/interest.js"></script>
+    <script src="scripts/interest_by_country_data_tables.js"></script>
+    <script src="scripts/interest_by_country.js"></script>
+
+
 </body>
+
 </html>
