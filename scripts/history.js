@@ -1,13 +1,14 @@
 const HEIGHT = 50;
 const AGGREGATION = 5;
-const AVERAGE_POINTS = 5;
 const MILLISECONDS_PER_DAY = 24 * 60 * 60 * 1000;
 const TRANSPARENCY_RANGES = [
     // { from: 0,    to: 0.1,   is: 0 },
     // { from: 0.1,  to: 0.3,   is: 0.2 },
     // { from: 0.4,  to: 0.6,   is: 0.5 },
     // { from: 0.7,  to: 1,     is: 0.7 }
-]
+];
+
+let AVERAGE_POINTS = 5;
 
 const IMPORTANT_DATES = [
     new Date(2005, 0, 1),
@@ -104,10 +105,19 @@ function drawHistoricalChart(canvas, data) {
     }
 }
 
-for(var sector in window.historicalData) {
-    var canvas = document.getElementById(`history-${sector}`);
-    if(!canvas) continue;
-
-    drawHistoricalChart(canvas, window.historicalData[sector]);
+function redraw(){
+    for(var sector in window.historicalData) {
+        var canvas = document.getElementById(`history-${sector}`);
+        if(!canvas) continue;
+    
+        drawHistoricalChart(canvas, window.historicalData[sector]);
+    }
 }
 
+redraw();
+
+document.getElementById("detail-slider").addEventListener("input", function (e) {
+    AVERAGE_POINTS = 9 - this.value;
+    document.getElementById("detail-explanation").innerHTML = AVERAGE_POINTS == 1 ? '1 bar = 1 week' : `1 bar = ${AVERAGE_POINTS} weeks`;
+    redraw();
+});

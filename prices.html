@@ -28,7 +28,7 @@
             <div class="history-table__header">
                 <h3 class="history-table__header-sector">Sector</h3>
                 <div class="history-table__header-change">
-                    <h3>Relative volatility over time (1 bar = 5 weeks)</h3>
+                    <h3>Relative volatility over time</h3>
 
                     <div class="history-table__header-change__description">
                         <span style="left: 5px; bottom: 7px;">01/2005</span>
@@ -101,6 +101,11 @@
                         <p>High <strong>positive</strong> price change relative to the entire history of that sector</p>
                         <p>No price change</p>
                         <p>High <strong>negative</strong> price change relative to the entire history of that sector</p>
+                    </div>
+                    <div class="historical-legend__detail">
+                        <h3>Detail level:</h3>
+                        <input id="detail-slider" type="range" min="0" max="8" value="4">
+                        <p id="detail-explanation">1 bar = 5 weeks</p>
                     </div>
                 </div>
             </div>
