@@ -30,7 +30,7 @@ var firstYearTrendChartOptions = {
     //legend: legend,
     data: firstYearTrendChartData,
     legend: {
-        legendMarkerType: "square",
+        cursor: "pointer",
         itemclick: function (e) {
             var legendText = e.dataSeries.legendText;
             if (legendText.includes("Before")) {
@@ -95,7 +95,7 @@ var firstYearTrendZoomedChartOptions = {
     data: firstYearTrendZoomedChartData,
     legendMarkerType: "square",
     legend: {
-        legendMarkerType: "square",
+        cursor: "pointer",
         itemclick: function (e) {
             var legendText = e.dataSeries.legendText;
             if (legendText.includes("Before")) {
@@ -187,13 +187,14 @@ for (var i = 1; i < lines.length; i++) {
             firstYearTrendChartData.push(
                 {
                     type: "line",
+                    legendMarkerType: "square",
                     showInLegend: false,
                     legendText: legendText,
                     name: stock,
                     color: color,
                     markerSize: 0,
                     dataPoints: chartDataPoints,
-                    //yValueFormatString: "#%",
+                    yValueFormatString: "#%",
                 }
             );
 
@@ -206,6 +207,7 @@ for (var i = 1; i < lines.length; i++) {
             firstYearTrendZoomedChartData.push(
                 {
                     type: "line",
+                    legendMarkerType: "square",
                     showInLegend: showInLegend,
                     legendText: legendText,
                     name: stock,
@@ -213,7 +215,6 @@ for (var i = 1; i < lines.length; i++) {
                     markerSize: 0,
                     dataPoints: chartDataPoints,
                     yValueFormatString: "#%",
-                    legendMarkerType: "square"
                 }
             );
         }

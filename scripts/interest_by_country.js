@@ -28,10 +28,14 @@ for (var i = 0; i < countryCodes.length; i++) {
 
     const noChangeZone = 0.0;
     if (changePercent >= noChangeZone) {
-        color = "rgba(0, 200, 0," + changePercent + ")";
+        var colorComponents = Math.round( 255 * (1 - changePercent));
+        color = "rgba(" + colorComponents + ", 255, " + colorComponents + ", 1)";
         hoverColor = "rgba(0, 200, 0, 0.7)";
     } else if (changePercent <= -1 * noChangeZone) {
-        color = "rgba(255, 0, 0," + changePercent * -1 + ")";
+        var colorComponents = Math.round( 255 * (1 + changePercent));
+        //color = "rgba(255, 0, 0," + changePercent * -1 + ")";
+        color = "rgba(255, "  + colorComponents  +  ", " + colorComponents + ", 1)";
+
         hoverColor = "rgba(255, 0, 0, 0.7)";
     } else {
         color = "rgba(100, 100, 100, 1)";
@@ -41,8 +45,8 @@ for (var i = 0; i < countryCodes.length; i++) {
     data.push({
         "id": code,
         "name": countryName,
-        "value": changePercent,
-        "displayValue": (changePercent * 100).toFixed(2) + "%",
+        "value": changePercentages[i],
+        "displayValue": (changePercentages[i] * 100).toFixed(2) + "%",
         "fill": am4core.color(color),
         "hoverColor": am4core.color(hoverColor)
     });
