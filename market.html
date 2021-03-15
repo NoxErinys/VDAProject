@@ -25,23 +25,50 @@
     <main>
         <h1 class="title">COVID-19 effect on the <i>market statistics</i></h1>
 
-        <div id="sector-filter" style="background: #e2e1e114; margin-bottom: 40px;">
+        <div id="sector-filter" style="background: #e2e1e114; margin-bottom: 10px;">
             <div style="display: flex;"><span style="padding: 9px; font-size: 24px;">Filter by sector: </span></div>
         </div>
-        <div class="row">
-            <div class="col left" id="sectorVolumeContainer"></div>
-            <div class="col right" id="sectorPercentContainer"></div>
+        <div id="color-blind-div" style="margin-bottom: 10px;">
+            <label class="color-blind-switch">
+                <input type="checkbox" onchange="colorBlindSwitchToggled(this)">
+                <span class="color-blind-slider round"></span>
+              </label>
+
+              <span style="padding: 6px;
+              font-size: 19px;
+              padding-right: 17px;">Are you color blind?</span>
         </div>
-        <div class="row" style="margin-top: 10px;">
-            <div class="col left" id="sectorMarketCapContainer"></div>
-            <div class="col right" id="sectorMarketCapPercentContainer"></div>
+        <div id="canvas-charts">
+            <div class="row">
+                <div class="col left" id="sectorVolumeContainer"></div>
+                <div class="col right" id="sectorPercentContainer"></div>
+            </div>
+            <div class="row" style="margin-top: 10px;">
+                <div class="col left" id="sectorMarketCapContainer"></div>
+                <div class="col right" id="sectorMarketCapPercentContainer"></div>
+            </div>
         </div>
+
+        <div id="am-charts" style="display: none;">
+            <div class="row">
+                <div class="col left" id="sectorVolumeAmContainer"></div>
+                <div class="col right" id="sectorPercentAmContainer"></div>
+            </div>
+            <div class="row" style="margin-top: 10px;">
+                <div class="col left" id="sectorMarketCapAmContainer"></div>
+                <div class="col right" id="sectorMarketCapPercentAmContainer"></div>
+            </div>
+        </div>
+
         <div class="row" style="margin-top: 10px;">
             <div class="full-width-col" id="industryVolumeContainer"></div>
             <div class="col" style="display: none;" id="industryPercentContainer"></div>
         </div>
 
     </main>
+    <script src="https://cdn.amcharts.com/lib/4/core.js"></script>
+    <script src="https://cdn.amcharts.com/lib/4/charts.js"></script>
+    <script src="https://www.amcharts.com/lib/4/themes/patterns.js"></script>
 
     <script src="scripts/lib/canvasjs.min.js"></script>
     <script src="scripts/market_share.js"></script>
